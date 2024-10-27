@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ::selection {
+  background: #EEC935;
+  color: #000; 
+} */
+body {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; 
+  color: #2b3a67;
+  line-height: 1;
+  letter-spacing: normal;
+  background: rgb(24, 24, 24);
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+ul, li {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.pre-header {
+  font-family: "Rajdhani", sans-serif;
+  color: #2b3a67;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+  color: #fff;
+  display: block;
+}
+.secondry-heading {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+.secondry-heading.black {
+  color: #000;
+}
+.secondry-heading span {
+  background: linear-gradient(258deg, #dfa000  9%, #e24949);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.primary-btn, .secondry-btn {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid#fff;
+  background: transparent;
+  display: inline-block;
+  border-radius: 0px 15px 0px 15px;
+  transition:all ease 0.6s;
+}
+.secondry-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+.secondry-btn:hover, .primary-btn:hover {
+  background: linear-gradient(to left, transparent 50%, #dfa000  0%, #e24949 80%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  animation: gradientAnimation .5s ;
+  border: 1px solid #e2494900;
+  border-radius: 30px 0 30px 0px;
+  color: #fff;
+}
+/* keyframes here  */
+@keyframes gradientAnimation {
+  0% {
+      background-position: right bottom;
+  }
+  100% {
+      background-position: left bottom;
+  }
+}
+.default-text {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  display: block;
+  font-weight: 600;
+  margin: 25px 0;
+  color: #ffffff;
+  line-height: 1.5;
+  max-width: 620px;
+}
+.default-text.black {
+  color: #000;
+}
+.input-field {
+  border: 1px solid #333;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+.get-started-btn {
+  display: none;
+}
+.input-field::placeholder {
+  color: #333;
+}
+
+/* header styles starts here */

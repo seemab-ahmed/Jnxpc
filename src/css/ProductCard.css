@@ -1,0 +1,194 @@
+
+.banner-prod-card {
+    border-radius: 0px 30px 0px 30px;
+    position: relative;
+    padding: 25px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 0 30px 10px #ffffff1c;
+    transition: all 0.8s ease-in-out;
+}
+.banner-prod-card::before  {
+    content: '';
+    position: absolute;
+    inset: -1px; 
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100% + 1px);
+    border-radius: 0px 30px 0px 30px;
+    border: 1px solid transparent;
+    background: linear-gradient(258deg, #dfa000  9%, #e24949);
+    transition: all 0.6s ease-in-out;
+    /* display: block; */
+    /* padding: 1px; */
+}
+.banner-prod-card::after  {
+    content: '';
+    position: absolute;
+    inset: 40% 0 0; 
+    margin: 0 auto;
+    width: 0%;
+    height: 0%;
+    border-radius: 0px 30px 0px 30px;
+    background: hsla(0, 0%, 100%, 0.075);
+    transition: all 0.6s ease-in-out;
+    display: block;
+}
+.banner-prod-card:hover:after {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+.banner-prod-card:hover .prod-img-wrapper img  {
+    transform: scale(1.1);
+}
+.banner-prod-card.big-card {
+    grid-column: span 2;
+}
+.prod-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 0px 30px 0px 30px;
+}
+.prod-img-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease-in-out;
+}
+.prod-img-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #010101b2;
+    opacity: .8;
+    z-index: 0;
+}
+.prod-card-body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    z-index: 1;
+}
+.prod-title {
+    font-size: 44px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    display: block;
+}
+.big-card .prod-title {
+    font-size: 68px;
+    color: #fff;
+}
+.prod-title span {
+    background: linear-gradient(258deg, #dfa000  9%, #e24949);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.prod-detail-card {
+    padding: 1px;
+    position: relative;
+    background: linear-gradient(258deg, #dfa000  9%, #e24949);
+    /* overflow: hidden; */
+    border-radius: 0 30px 0 30px ;
+}
+.prod-detail-card .inner {
+    padding: 25px;
+    background: #000;
+    border-radius: 0 29px 0 29px;
+}
+.prod-detail-card:hover .img-wrapper .img-1{
+    opacity: 0;
+}
+.prod-detail-card:hover .img-wrapper .img-2{
+    max-width: 100%;
+}
+.prod-detail-card .img-wrapper {
+    max-width: 90%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.prod-detail-card .img-wrapper .img-1{
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.prod-detail-card .img-wrapper .img-2{
+    position: absolute;
+    max-width: 0%;
+    transition: all 0.5s ease-in-out;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: block;
+}
+.off-price {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    background: linear-gradient(to left, #dfa000  0%, #e24949 80%);
+    border-radius: 5px;
+}
+.star-rating {
+    display: flex;
+    gap: 10px; 
+    margin-bottom: 20px;
+  }
+  
+  .star {
+    font-size: 16px; 
+    color: #fff; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+.prod-detail-card .card-title {
+    color: #fff;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.price-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.price-block .price {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+
+}
+.price-block .cut-price {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: line-through;
+    opacity: .6;
+    display: block;
+}
